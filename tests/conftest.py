@@ -12,14 +12,14 @@ import pytest
 
 from flask import Flask, jsonify
 
-import flask_urs_jwt
+import flask_urs
 
 import responses
 
 
 @pytest.fixture(scope='function')
 def urs():
-    return flask_urs_jwt.URS()
+    return flask_urs.URS()
 
 
 @pytest.fixture(scope='function')
@@ -47,7 +47,7 @@ def app(urs, user):
     urs.init_app(app)
 
     @app.route('/protected')
-    @flask_urs_jwt.jwt_required()
+    @flask_urs.jwt_required()
     def protected():
         return 'success'
 

@@ -1,18 +1,18 @@
 """
-Flask-URS-JWT
+Flask-URS
 =========
 
-Flask-URS-JWT is a Flask extension that adds basic Json Web Token features to any application based
+Flask-URS is a Flask extension that adds basic Json Web Token features to any application based
 upon NASA EarthData Oauth2.
 
 Resources
 ---------
 
-* `Documentation <http://packages.python.org/Flask-URS-JWT/>`_
-* `Issue Tracker <https://github.com/justinwp/flask-urs-jwt/issues>`_
+* `Documentation <http://packages.python.org/Flask-URS/>`_
+* `Issue Tracker <https://github.com/justinwp/flask-urs/issues>`_
 * `Source <https://github.com/justinwp/flask-urs-jwt>`_
 * `Development Version
-  <https://github.com/justinwp/flask-urs-jwt/raw/develop#egg=Flask-URS-JWT-dev>`_
+  <https://github.com/justinwp/flask-urs-jwt/raw/develop#egg=Flask-URS-dev>`_
 
 """
 
@@ -39,7 +39,7 @@ class PyTest(TestCommand):
         TestCommand.finalize_options(self)
         self.test_args = [
             '-xrs',
-            '--cov', 'flask_urs_jwt',
+            '--cov', 'flask_urs',
             '--cov-report', 'term-missing',
             '--pep8',
             '--flakes',
@@ -56,9 +56,10 @@ class PyTest(TestCommand):
 
 
 setup(
-    name='Flask-URS-JWT',
-    version='0.1',
-    url='https://github.com/justinwp/flask-urs-jwt',
+    name='Flask-URS',
+    version='0.1.0',
+    url='https://github.com/justinwp/flask-urs',
+    download_url='https://github.com/justinwp/flask-urs/tarball/0.1.0', # I'll explain this in a second
     license='MIT',
     author='Justin Poehnelt',
     author_email='Justin.Poehnelt@gmail.com',

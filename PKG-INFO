@@ -1,8 +1,8 @@
 Metadata-Version: 1
-Name: Flask-URS-JWT
+Name: Flask-URS
 Version: 0.1.0
 Summary: NASA EarthData(URS) JWT token authentication for Flask apps
-Home-page: https://github.com/justinwp/flask-urs-jwt
+Home-page: https://github.com/justinwp/flask-urs
 Author: Justin Poehnelt
 Author-email: Justin.Poehnelt@gmail.com
 License: MIT
@@ -15,9 +15,9 @@ Description:
         Resources
         ---------
         
-        * `Documentation <http://packages.python.org/Flask-URS-JWT/>`_
-        * `Issue Tracker <https://github.com/justinwp/flask-urs-jwt/issues>`_
-        * `Source <https://github.com/justinwp/flask-urs-jwt>`_
+        * `Documentation <http://packages.python.org/Flask-URS/>`_
+        * `Issue Tracker <https://github.com/justinwp/flask-urs/issues>`_
+        * `Source <https://github.com/justinwp/flask-urs>`_
         
         
 Platform: any

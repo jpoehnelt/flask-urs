@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from flask_urs_jwt import URS, URSError
+from flask_urs import URS, URSError
 import os
 
 app = Flask(__name__)

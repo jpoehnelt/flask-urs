@@ -24,12 +24,12 @@ __version__ = '0.1.0'
 
 current_user = LocalProxy(lambda: getattr(stack.top, 'current_user', None))
 
-_urs = LocalProxy(lambda: current_app.extensions['urs_jwt'])
+_urs = LocalProxy(lambda: current_app.extensions['urs'])
 
 CONFIG_DEFAULTS = {
     'URS_CALLBACK_RULE': '/callback',
     'URS_URL_PREFIX': '/urs',
-    'URS_CALLBACK_TEMPLATE': 'urs_jwt/callback.html',
+    'URS_CALLBACK_TEMPLATE': 'urs/callback.html',
     'JWT_EXPIRATION_DELTA': 3600,
     'JWT_EXPIRATION_LEEWAY': 100,
     'JWT_VERIFY_EXPIRATION': True,
@@ -191,7 +191,7 @@ class URS(object):
 
         app.errorhandler(JWTError)(self.jwt_error_callback)
 
-        app.extensions['urs_jwt'] = self
+        app.extensions['urs'] = self
 
     @property
     def redirect_url_rule(self):

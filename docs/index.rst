@@ -1,7 +1,7 @@
-Flask-URS-JWT
+Flask-URS
 =========
 
-.. currentmodule:: flask_urs_jwt
+.. currentmodule:: flask-urs
 
 Add basic JWT features to your `Flask`_ application based upon NASA EarthData(URS) Oauth2.
 
@@ -9,8 +9,8 @@ Add basic JWT features to your `Flask`_ application based upon NASA EarthData(UR
 Links
 -----
 
-* `documentation <http://packages.python.org/Flask-URS-JWT/>`_
-* `source <http://github.com/justinwp/flask-urs-jwt>`_
+* `documentation <http://packages.python.org/Flask-URS/>`_
+* `source <http://github.com/justinwp/flask-urs>`_
 * :doc:`changelog </changelog>`
 
 
@@ -19,12 +19,12 @@ Installation
 
 Install with **pip** or **easy_install**::
 
-    pip install Flask-URS-JWT
+    pip install Flask-URS
 
 or download the latest version from version control::
 
-    git clone https://github.com/justinwp/flask-urs-jwt.git ./flask-urs-jwt
-    pip install ./flask-urs-jwt
+    git clone https://github.com/justinwp/flask-urs.git ./flask-urs
+    pip install ./flask-urs
 
 
 Quickstart
@@ -35,17 +35,15 @@ Minimum viable application configuration:
 .. code-block:: python
 
     from flask import Flask, render_template, request, jsonify
-    from flask_urs_jwt import URS, URSError
+    from flask-urs import URS, URSError
 
 
     app = Flask(__name__)
     app.debug = True
     app.config['SECRET_KEY'] = 'super-secret'
-
-
-    app.config['URS_CLIENT_ID'] = 'p-eoBHhkaGOvVjP-vSYC4w&'
-    app.config['URS_UID'] = 'gfsad30_test'
-    app.config['URS_PASSWORD'] = 'xEEoS1IyCdc8HaBVzfv6mD_X'
+    app.config['URS_CLIENT_ID'] = 'asdf'
+    app.config['URS_UID'] = 'asdf'
+    app.config['URS_PASSWORD'] = 'asdf'
 
     urs = URS(app)
 
@@ -61,7 +59,7 @@ Minimum viable application configuration:
 
     @urs.payload_handler
     def callback(user):
-        user.update({'custom_data': 'asdfasdfasdfsdfsd'})
+        user.update({'custom_data': 'asdf'})
         return user
 
     @app.errorhandler(URSError)
@@ -86,4 +84,4 @@ Within a function decorated by `jwt_required()`, you can use the
 request context.
 
 .. _Flask: http://flask.pocoo.org
-.. _GitHub: http://github.com/justinwp/flask-urs-jwt
+.. _GitHub: http://github.com/justinwp/flask-urs

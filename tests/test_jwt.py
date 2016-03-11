@@ -15,7 +15,7 @@ import responses
 
 import pytest
 
-import flask_urs_jwt
+import flask_urs
 
 
 def post_json(client, url, data):
@@ -43,8 +43,8 @@ def assert_error_response(r, code, msg, desc):
 def test_initialize():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'super-secret'
-    urs = flask_urs_jwt.URS(app)
-    assert isinstance(urs, flask_urs_jwt.URS)
+    urs = flask_urs.URS(app)
+    assert isinstance(urs, flask_urs.URS)
     assert len(app.url_map._rules) == 2
 
 
@@ -63,7 +63,7 @@ def test_jwt_required_decorator_with_valid_request_current_user(urs, client, use
         c.get(
             '/protected',
             headers={'authorization': 'Bearer ' + token})
-        assert flask_urs_jwt.current_user
+        assert flask_urs.current_user
 
 
 def test_jwt_required_decorator_with_invalid_request_current_user(app, client):
@@ -71,7 +71,7 @@ def test_jwt_required_decorator_with_invalid_request_current_user(app, client):
         c.get(
             '/protected',
             headers={'authorization': 'Bearer bogus'})
-        assert not flask_urs_jwt.current_user
+        assert not flask_urs.current_user
 
 
 def test_jwt_required_decorator_with_invalid_authorization_headers(client):
@@ -168,7 +168,7 @@ def test_custom_decode_handler(client, user, urs):
         c.get(
             '/protected',
             headers={'authorization': 'Bearer ' + token})
-        assert flask_urs_jwt.current_user == decode_data(user)
+        assert flask_urs.current_user == decode_data(user)
 
 
 def test_custom_payload_handler(client, urs, user):
@@ -189,4 +189,4 @@ def test_custom_payload_handler(client, urs, user):
         c.get(
             '/protected',
             headers={'authorization': 'Bearer ' + token})
-        assert flask_urs_jwt.current_user == user
+        assert flask_urs.current_user == user
