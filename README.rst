@@ -26,6 +26,5 @@ Heavily influenced by `Flask-JWT <https://github.com/mattupstate/flask-jwt>`_
 Resources
 ---------
 
-- `Documentation <http://packages.python.org/Flask-URS/>`_
 - `Issue Tracker <http://github.com/justinwp/flask-urs/issues>`_
 - `Code <http://github.com/justinwp/flask-urs/>`_
