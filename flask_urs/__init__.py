@@ -88,7 +88,7 @@ class URSError(Exception):
         self.headers = headers
 
 
-def verify_urs(realm=None):
+def verify_jwt(realm=None):
     """Does the actual work of verifying the JWT data in the current request.
     This is done automatically for you by `jwt_required()` but you could call it manually.
     Doing so would be useful in the context of optional JWT access in your APIs.
