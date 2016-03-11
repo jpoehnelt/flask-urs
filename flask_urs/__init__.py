@@ -206,7 +206,7 @@ class URS(object):
     def callback(self):
         code = request.args.get('code', None)
         if code is None:
-            raise Exception
+            raise URSError('Invalid Code', 'No Authorization Code in Arguments')
 
         access = self.get_token(code)
         user = self.get_user(access['access_token'], access['endpoint'])
