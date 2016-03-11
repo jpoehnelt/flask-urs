@@ -15,7 +15,7 @@ Flask-URS
     :target: https://pypi.python.org/pypi//Flask-URS/
     :alt: Downloads
 
-.. image:: https://pypip.in/license/flask-urs/badge.png
+.. image:: https://img.shields.io/pypi/l/flask-urs.svg
     :target: https://pypi.python.org/pypi/Flask-URS/
     :alt: License
 
