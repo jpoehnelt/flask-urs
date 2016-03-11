@@ -1,6 +1,6 @@
 Metadata-Version: 1
 Name: Flask-URS
-Version: 0.1.0
+Version: 0.1.1
 Summary: NASA EarthData(URS) JWT token authentication for Flask apps
 Home-page: https://github.com/justinwp/flask-urs
 Author: Justin Poehnelt
