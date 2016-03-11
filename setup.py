@@ -57,9 +57,9 @@ class PyTest(TestCommand):
 
 setup(
     name='Flask-URS',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/justinwp/flask-urs',
-    download_url='https://github.com/justinwp/flask-urs/tarball/0.1.1',
+    download_url='https://github.com/justinwp/flask-urs/tarball/0.1.2',
     license='MIT',
     author='Justin Poehnelt',
     author_email='Justin.Poehnelt@gmail.com',

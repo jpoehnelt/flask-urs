@@ -20,7 +20,7 @@ import requests
 from datetime import timedelta
 from collections import OrderedDict
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 current_user = LocalProxy(lambda: getattr(stack.top, 'current_user', None))
 
@@ -64,7 +64,7 @@ def jwt_required(realm=None):
     def wrapper(fn):
         @wraps(fn)
         def decorator(*args, **kwargs):
-            verify_urs(realm)
+            verify_jwt(realm)
             return fn(*args, **kwargs)
 
         return decorator

@@ -3,6 +3,13 @@ Flask-URS Changelog
 
 Here you can see the full list of changes between each Flask-URS release.
 
+Version 0.1.2
+-------------
+
+Released March 11th 2016
+
+- Copy/Replace Fixes
+
 Version 0.1.0
 -------------
 
