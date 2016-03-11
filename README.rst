@@ -4,18 +4,18 @@ Flask-URS
 .. image:: https://travis-ci.org/justinwp/flask-urs.svg?branch=master
     :target: https://travis-ci.org/justinwp/flask-urs
 
-.. image:: https://pypip.in/v/Flask-URS/badge.png
+.. image:: https://img.shields.io/pypi/v/flask-urs.svg
     :target: https://pypi.python.org/pypi/Flask-URS/
     :alt: Latest Version
 
 .. image:: https://coveralls.io/repos/github/justinwp/flask-urs/badge.svg?branch=master
     :target: https://coveralls.io/github/justinwp/flask-urs?branch=master
 
-.. image:: https://pypip.in/d/Flask-URS/badge.png
+.. image:: https://img.shields.io/pypi/dm/flask-urs.svg
     :target: https://pypi.python.org/pypi//Flask-URS/
     :alt: Downloads
 
-.. image:: https://pypip.in/license/Flask-URS/badge.png
+.. image:: https://pypip.in/license/flask-urs/badge.png
     :target: https://pypi.python.org/pypi/Flask-URS/
     :alt: License
 
