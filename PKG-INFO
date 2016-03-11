@@ -1,0 +1,31 @@
+Metadata-Version: 1
+Name: Flask-URS-JWT
+Version: 0.1.0
+Summary: NASA EarthData(URS) JWT token authentication for Flask apps
+Home-page: https://github.com/justinwp/flask-urs-jwt
+Author: Justin Poehnelt
+Author-email: Justin.Poehnelt@gmail.com
+License: MIT
+Description: 
+        Flask-URS-JWT
+        =========
+        
+        Flask-URS-JWT is a Flask extension that adds basic Json Web Token (based upon NASA EarthData) features to any application.
+        
+        Resources
+        ---------
+        
+        * `Documentation <http://packages.python.org/Flask-URS-JWT/>`_
+        * `Issue Tracker <https://github.com/justinwp/flask-urs-jwt/issues>`_
+        * `Source <https://github.com/justinwp/flask-urs-jwt>`_
+        
+        
+Platform: any
+Classifier: Development Status :: 3 - ALPHA
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
