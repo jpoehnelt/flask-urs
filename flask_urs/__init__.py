@@ -20,7 +20,7 @@ import requests
 from datetime import timedelta
 from collections import OrderedDict
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 current_user = LocalProxy(lambda: getattr(stack.top, 'current_user', None))
 
