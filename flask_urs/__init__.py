@@ -127,6 +127,7 @@ def verify_jwt(realm=None):
 
 
 def _default_payload_handler(user):
+    stack.top.current_user = user
     return user
 
 
@@ -157,7 +158,7 @@ def _default_jwt_error_handler(error):
     ])), error.status_code, error.headers
 
 
-def _default_response_handler(jwt, access):
+def _default_response_handler(user, jwt, access):
     return render_template(CONFIG_DEFAULTS.get('URS_CALLBACK_TEMPLATE'), jwt=jwt)
 
 
@@ -213,7 +214,7 @@ class URS(object):
         payload = self.payload_callback(user)
         jwt = self.encode_callback(payload)
 
-        return self.response_callback(jwt, access)
+        return self.response_callback(user, jwt, access)
 
     def refresh(self, refresh_token):
         """
