@@ -121,7 +121,7 @@ def test_jwt_required_decorator_with_missing_user(urs, client, user):
 @pytest.mark.usefixtures("fake_oauth_success")
 def test_custom_response_handler(app, client, urs, user):
     @urs.response_handler
-    def response_callback(jwt, access):
+    def response_callback(user, jwt, access):
         return jsonify({"jwt": jwt})
 
     r = client.get(
