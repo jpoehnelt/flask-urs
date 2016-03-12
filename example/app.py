@@ -20,7 +20,7 @@ def protected():
 
 
 @urs.response_handler
-def response_callback(jwt, access):
+def response_callback(user, jwt, access):
     return render_template('custom_callback.html', jwt=jwt)
 
 
