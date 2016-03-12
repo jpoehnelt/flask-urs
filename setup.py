@@ -59,7 +59,7 @@ setup(
     name='Flask-URS',
     version='0.1.3',
     url='https://github.com/justinwp/flask-urs',
-    download_url='https://github.com/justinwp/flask-urs/tarball/0.1.2',
+    download_url='https://github.com/justinwp/flask-urs/tarball/0.1.3',
     license='MIT',
     author='Justin Poehnelt',
     author_email='Justin.Poehnelt@gmail.com',
